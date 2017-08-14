@@ -10,13 +10,13 @@ export class OurServiceComponent implements OnInit {
 
   constructor(meta: Meta, public title: Title) {
 
-    title.setTitle('Sagenic | Our Services');
+    const pageTitle = 'Sagenic | Our Services';
 
-    meta.addTags([
-      { name: 'author', content: 'Jez Reel' },
-      { name: 'keywords', content: 'Web Development, Branding and Design, Mobile Development, Desktop Applications' },
-      { name: 'description', content: 'Here at Sagenic we offer different services such as Web Development and Branding and Design.' }
-    ]);
+    meta.updateTag({ name: 'keywords', content: 'Web Development, Branding and Design, Mobile Development, Desktop Applications' });
+    meta.updateTag({ name: 'description', content: 'Here at Sagenic we offer different services such as Web Development and Branding and Design.' });
+    meta.updateTag({ property: 'og:title', content: pageTitle });
+    meta.updateTag({ property: 'og:description', content: 'Here at Sagenic we offer different services such as Web Development and Branding and Design.' });
+    meta.updateTag({ property: 'og:image', content: 'http://edynamique.com/portals/0/MagenicPhoto.JPG' });
 
   }
 

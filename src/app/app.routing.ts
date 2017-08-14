@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { OurServiceComponent } from './our-service/our-service.component';
 
 const routes: Routes = [
     {
         path: '', component: HomeComponent
     },
     {
-        path: 'about-us', loadChildren: './about-us/about-us.module#AboutUsModule'
+        path: 'about-us', component: AboutUsComponent
     },
     {
-        path: 'contact-us', loadChildren: './contact-us/contact-us.module#ContactUsModule'
+        path: 'contact-us', component: ContactUsComponent
     },
     {
-        path: 'our-service', loadChildren: './our-service/our-service.module#OurServiceModule'
+        path: 'our-service', component: OurServiceComponent
     },
     {
         path: '**', component: HomeComponent

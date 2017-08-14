@@ -14,16 +14,11 @@ export class AboutUsComponent implements OnInit {
 
     title.setTitle(pageTitle);
 
-    meta.addTags([
-      { name: 'author', content: 'Jez Reel' },
-      { name: 'keywords', content: 'angular seo, angular 4 universal, sagenic, tech talk tuesday, about us, applications' },
-      { name: 'description', content: 'We are a group of developers whos passionate about building world class Application.' },
-      { name: 'fb:app_id', content: '1560442157353717' },
-      { name: 'og:title', content: pageTitle },
-      { name: 'og:site_name', content: 'Sagenic' },
-      { name: 'og:description', content: 'We are a group of developers whos passionate about building world class Application.' },
-      { name: 'og:image', content: 'https://media.licdn.com/media/AAEAAQAAAAAAAAdxAAAAJDY5OTE0ZmVjLWVmZDItNGIyMy05NjU2LTk5NmZmMzYzYTNlNA.png' }
-    ]);
+    meta.updateTag({ name: 'keywords', content: 'angular seo, angular 4 universal, sagenic, tech talk tuesday, about us, applications' });
+    meta.updateTag({ name: 'description', content: 'We are a group of developers whos passionate about building world class Application.' });
+    meta.updateTag({ property: 'og:title', content: pageTitle });
+    meta.updateTag({ property: 'og:description', content: 'We are a group of developers whos passionate about building world class Application.' });
+    meta.updateTag({ property: 'og:image', content: 'https://media.licdn.com/media/AAEAAQAAAAAAAAdxAAAAJDY5OTE0ZmVjLWVmZDItNGIyMy05NjU2LTk5NmZmMzYzYTNlNA.png' });
 
   }
 

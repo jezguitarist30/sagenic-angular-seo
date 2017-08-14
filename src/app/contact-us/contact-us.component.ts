@@ -16,11 +16,11 @@ export class ContactUsComponent implements OnInit {
 
       title.setTitle(data.title);
 
-      meta.addTags([
-        { name: 'author', content: 'Jez Reel' },
-        { name: 'keywords', content: 'angular seo, angular 4 universal, sagenic, tech talk tuesday, contact us, applications' },
-        { name: 'description', content: data.body }
-      ]);
+      meta.updateTag({ name: 'keywords', content: 'angular seo, angular 4 universal, sagenic, tech talk tuesday, contact us, applications' });
+      meta.updateTag({ name: 'description', content: data.body });
+      meta.updateTag({ property: 'og:title', content: data.title });
+      meta.updateTag({ property: 'og:description', content: data.body });
+      meta.updateTag({ property: 'og:image', content: 'https://media.licdn.com/media/AAEAAQAAAAAAAAdxAAAAJDY5OTE0ZmVjLWVmZDItNGIyMy05NjU2LTk5NmZmMzYzYTNlNA.png' });
 
     });
 

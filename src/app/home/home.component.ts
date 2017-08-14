@@ -14,16 +14,12 @@ export class HomeComponent implements OnInit {
 
     title.setTitle(pageTitle);
 
-    meta.addTags([
-      { name: 'author', content: 'Jez Reel' },
-      { name: 'keywords', content: 'angular seo, angular 4 universal, sagenic, tech talk tuesday' },
-      { name: 'description', content: 'This is my Angular SEO-based App, Home Page!' },
-      { name: 'fb:app_id', content: '1560442157353717' },
-      { name: 'og:title', content: pageTitle },
-      { name: 'og:site_name', content: 'Sagenic' },
-      { name: 'og:description', content: 'This is my Angular SEO-based App, Home Page!' },
-      { name: 'og:image', content: 'https://media.licdn.com/media/AAEAAQAAAAAAAAdxAAAAJDY5OTE0ZmVjLWVmZDItNGIyMy05NjU2LTk5NmZmMzYzYTNlNA.png' }
-    ]);
+    meta.updateTag({ name: 'keywords', content: 'angular seo, angular 4 universal, sagenic, tech talk tuesday' });
+    meta.updateTag({ name: 'description', content: 'This is my Angular SEO-based App, Home Page!' });
+    meta.updateTag({ property: 'og:title', content: pageTitle });
+    meta.updateTag({ property: 'og:description', content: 'This is my Angular SEO-based App, Home Page!' });
+    meta.updateTag({ property: 'og:image', content: 'https://media.licdn.com/media/AAEAAQAAAAAAAAdxAAAAJDY5OTE0ZmVjLWVmZDItNGIyMy05NjU2LTk5NmZmMzYzYTNlNA.png' });
+
   }
 
   ngOnInit() {

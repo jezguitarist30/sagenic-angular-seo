@@ -25,7 +25,6 @@ import { AppComponent } from './app.component';
     ContactUsModule,
     AppRoutingModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
