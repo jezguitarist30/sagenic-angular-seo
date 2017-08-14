@@ -10,7 +10,7 @@ export class OurServiceComponent implements OnInit {
 
   constructor(meta: Meta, public title: Title) {
 
-    const pageTitle = 'Sagenic | Our Services';
+    const pageTitle = 'Sagenic | Our Service';
 
     meta.updateTag({ name: 'keywords', content: 'Web Development, Branding and Design, Mobile Development, Desktop Applications' });
     meta.updateTag({ name: 'description', content: 'Here at Sagenic we offer different services such as Web Development and Branding and Design.' });
