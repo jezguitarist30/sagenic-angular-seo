@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "dist/browser",
       "assets": [
         "assets",
         "favicon.ico"
@@ -32,17 +32,18 @@
         "prod": "environments/environment.prod.ts"
       }
     },
-    {      
+    {
       "platform": "server",
-      "root": "src",      
-      "outDir": "dist-server",
+      "root": "src",
+      "outDir": "dist/server",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "server.js"
       ],
-      "index": "index.html",      
-      "main": "main.server.ts",      
-      "test": "test.ts",      
+      "index": "index.html",
+      "main": "main.server.ts",
+      "test": "test.ts",
       "tsconfig": "tsconfig.server.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
